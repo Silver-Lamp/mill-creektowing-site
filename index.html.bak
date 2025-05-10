@@ -23,6 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Red+Rose:wght@300;400;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Mill Creek Towing | Fast & Reliable Towing in Mill Creek, WA" />
@@ -39,10 +40,17 @@
     
     <!-- Google Analytics -->
     <!-- Google tag (gtag.js) -->
-    <script type="module" async async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
     
     <!-- Structured Data -->
-    <script type="module" data-schema='{
+    <script type="application/ld+json" data-schema='{
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Mill Creek Towing",
@@ -58,6 +66,16 @@
         "addressCountry": "US"
       }
     }'></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const schemaScript = document.querySelector('script[type="application/ld+json"]');
+        if (schemaScript) {
+          const schemaData = JSON.parse(schemaScript.getAttribute('data-schema'));
+          schemaScript.textContent = JSON.stringify(schemaData, null, 2);
+        }
+      });
+    </script>
+    <script type="module" src="js/schema.js"></script>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -65,9 +83,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-  <script type="module" crossorigin src="/main.js"></script>
-  <link rel="modulepreload" crossorigin href="/main2.js">
-  <link rel="stylesheet" crossorigin href="/style.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (document.body.innerHTML.includes('{{')) {
+          alert('⚠️ Unmerged placeholder detected on this page!');
+          console.warn('⚠️ Unmerged placeholder detected on this page!');
+        }
+      });
+    </script>
 </head>
 <body class="index-page">
     <!-- Configuration: MUST be first in body -->
@@ -80,9 +103,9 @@
             <div class="logo-reviews-container">
                 <a href="index.html" class="logo-container">
                     <picture>
-                        <source srcset="/logo.webp" type="image/webp">
-                        <source srcset="/logo.png" type="image/png">
-                        <img src="/logo.png" alt="Mill Creek Towing Logo" class="site-logo" width="128" height="128">
+                        <source srcset="images/logo.webp" type="image/webp">
+                        <source srcset="images/logo.png" type="image/png">
+                        <img src="images/logo.png" alt="Mill Creek Towing Logo" class="site-logo" width="128" height="128">
                     </picture>
                     <span class="logo-city-overlay">Mill Creek</span>
                 </a>
@@ -116,7 +139,7 @@
 
     <!-- Hero Section: Split -->
     <section class="hero-split" id="main-content">
-        <div class="hero-right" style="background-image: url('/hero.jpg');">
+        <div class="hero-right" style="background-image: url('images/hero.jpg');">
             <div class="hero-overlay">
                 <div class="hero-text-group">
                     <div class="hero-title">Mill Creek Towing</div>
@@ -145,7 +168,7 @@
                 </ul>
             </div>
             <div class="quote-card">
-                <img src="/quote-card.png" alt="Free Quote" class="quote-img" style="max-width:320px; height:auto;">
+                <img src="images/quote-card.png" alt="Free Quote" class="quote-img" style="max-width:320px; height:auto;">
                 <a href="#contact" class="btn quote-btn">GET A QUOTE</a>
             </div>
         </section>
@@ -207,9 +230,9 @@
                 <div class="about-photo">
                     <div class="logo-container about-logo">
                         <picture>
-                            <source srcset="/logo.webp" type="image/webp">
-                            <source srcset="/logo.png" type="image/png">
-                            <img src="/logo.png" alt="Mill Creek Towing Logo" class="site-logo">
+                            <source srcset="images/logo.webp" type="image/webp">
+                            <source srcset="images/logo.png" type="image/png">
+                            <img src="images/logo.png" alt="Mill Creek Towing Logo" class="site-logo">
                         </picture>
                         <span class="logo-city-overlay">Mill Creek</span>
                     </div>
@@ -219,30 +242,27 @@
 
         <!-- Testimonials Section -->
         <section class="testimonials">
-            <!-- Testimonials Section -->
-<section class="testimonials">
-  <h2>What Our Customers Say</h2>
-  <div class="testimonial-grid">
-    <!-- Testimonial 1 -->
-    <div class="testimonial">
-      <p class="testimonial-text">I was stranded in Mill Creek after my car broke down. They arrived within 20 minutes and got me back on the road in no time. Their emergency service is truly reliable!</p>
-      <p class="testimonial-meta">— Jessica J., Everett, WA</p>
-    </div>
-    
-    <!-- Testimonial 2 -->
-    <div class="testimonial">
-      <p class="testimonial-text">Late night breakdown in Mill Creek - Mill Creek Towing was there in 25 minutes. Professional, courteous, and got my vehicle to the shop safely. Highly recommend their emergency service!</p>
-      <p class="testimonial-meta">— Sarah J., Mill Creek, WA</p>
-    </div>
-    
-    <!-- Testimonial 3 -->
-    <div class="testimonial">
-      <p class="testimonial-text">Needed a flatbed tow truck for my SUV in Mill Creek. Mill Creek Towing provided a flatbed service and handled my vehicle with care. Very impressed with their professionalism!</p>
-      <p class="testimonial-meta">— Michael I., Bellevue, WA</p>
-    </div>
-  </div>
-</section> 
-          </section>
+          <h2>What Our Customers Say</h2>
+          <div class="testimonial-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+              <p class="testimonial-text">I was stranded in Mill Creek after my car broke down. They arrived within 20 minutes and got me back on the road in no time. Their emergency service is truly reliable!</p>
+              <p class="testimonial-meta">— Jessica J., Renton, WA</p>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+              <p class="testimonial-text">Late night breakdown in Mill Creek - Mill Creek Towing was there in 25 minutes. Professional, courteous, and got my vehicle to the shop safely. Highly recommend their emergency service!</p>
+              <p class="testimonial-meta">— Sarah J., Redmond, WA</p>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+              <p class="testimonial-text">Needed a flatbed tow truck for my SUV in Mill Creek. Mill Creek Towing provided a flatbed service and handled my vehicle with care. Very impressed with their professionalism!</p>
+              <p class="testimonial-meta">— Michael I., Mill Creek, WA</p>
+            </div>
+          </div>
+        </section>
 
         <!-- FAQ Section -->
         <section class="faq" id="faq">
@@ -267,39 +287,71 @@
 
         <!-- Our Service Areas Section -->
         <section class="service-areas">
-              <h2>Service Areas</h2>
-              <p>
+            <h2>Our Service Areas</h2>
+            <p>At our towing company in Mill Creek, WA, we serve a range of locations to ensure that we can get to you no matter where you are. We serve all the surrounding areas and provide coverage in the entire state. Our customers trust us to get them back on the road quickly and safely.</p>
+            <div class="areas-list" style="display: flex; flex-wrap: wrap; gap: 40px;">
+                <ul style="flex: 1 1 220px; min-width: 200px;">
+                    
     <div class="service-areas-columns">
       <div class="service-areas-column">
-        <div class="service-area-item">Bellevue</div>
-<div class="service-area-item">Everett</div>
-<div class="service-area-item">Kirkland</div>
-<div class="service-area-item"><strong>Mill Creek</strong></div>
+        <div class="service-area-item">{{service_area_1}}</div>
+        <div class="service-area-item">{{service_area_2}}</div>
+        <div class="service-area-item">{{service_area_3}}</div>
       </div>
       <div class="service-areas-column">
-        <div class="service-area-item">Redmond</div>
-<div class="service-area-item">Renton</div>
-<div class="service-area-item">Seattle</div>
+        <div class="service-area-item">{{service_area_4}}</div>
+        <div class="service-area-item">{{service_area_5}}</div>
+        <div class="service-area-item">{{service_area_6}}</div>
+        <div class="service-area-item">{{service_area_7}}</div>
       </div>
     </div>
-  </p>
-            </section>
+  
+                </ul>
+            </div>
+        </section>
     </main>
 
     <!-- Configuration: MUST be first at the bottom -->
+    <script src="js/config.js"></script>
+    <script src="js/map.js"></script>
 
     <!-- Error Reporter (must be before main.js) -->
+    <script src="js/error-reporter.js"></script>
 
     <!-- Main Application -->
+    <script src="js/main.js"></script>
 
     <!-- Sentry Error Tracking -->
+    <script src="js/vendor/sentry-bundle.min.js"></script>
+    <script>
+      document.addEventListener('config-ready', function() {
+        if (CONFIG.sentry && CONFIG.sentry.dsn && CONFIG.sentry.dsn !== "YOUR_SENTRY_DSN") {
+          Sentry.init(CONFIG.sentry);
+        }
+      });
+    </script>
 
     <!-- Firebase SDKs -->
-    <script type="module" async src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js" crossorigin="anonymous"></script>
-    <script type="module" async src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js" crossorigin="anonymous"></script>
-    <script type="module" async src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-check-compat.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-check-compat.js" crossorigin="anonymous"></script>
     
     <!-- Application Scripts -->
+    <script>
+      // Ensure CONFIG is available before initializing Firebase
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof CONFIG === 'undefined') {
+          console.error('CONFIG is not defined. Firebase initialization skipped.');
+          return;
+        }
+        
+        // Load Firebase initialization script
+        const script = document.createElement('script');
+        script.src = 'js/firebase-init.js';
+        document.body.appendChild(script);
+      });
+    </script>
+    <script src="js/error-log-viewer.js" defer></script>
 
     <!-- Map Section (moved from footer) -->
     <div class="footer-map" style="margin: 40px auto 0 auto; max-width: 900px;">
@@ -337,5 +389,31 @@
             &copy; <span id="footer-year"></span> Mill Creek Towing. Fast, Reliable, Local Service 24/7.
         </div>
     </footer>
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+    <script>
+      // Minimal hamburger menu toggle
+      var hamburger = document.querySelector('.hamburger');
+      var mobileNav = document.getElementById('mobile-nav');
+      if (hamburger && mobileNav) {
+        function updateHamburgerDisplay() {
+          if (window.innerWidth <= 900) {
+            hamburger.style.display = 'block';
+          } else {
+            hamburger.style.display = 'none';
+            mobileNav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+          }
+        }
+        updateHamburgerDisplay();
+        window.addEventListener('resize', updateHamburgerDisplay);
+        hamburger.addEventListener('click', function() {
+          var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !expanded);
+          mobileNav.classList.toggle('open', !expanded);
+        });
+      } else {
+        console.log('Hamburger or mobile nav not found');
+      }
+    </script>
 </body>
 </html>
