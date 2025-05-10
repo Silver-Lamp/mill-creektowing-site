@@ -1,0 +1,77 @@
+{
+  "business": {
+    "name": "Mill Creek Towing"
+  },
+  "phone_number": "(425) 270-2226",
+  "location_name": "Mill Creek",
+  "coordinates": {
+    "lat": "47.8577455",
+    "lng": "-122.2210628"
+  },
+  "service_areas": [
+    "Mill Creek",
+    "Mill Creek",
+    "Seattle",
+    "Bellevue",
+    "Everett",
+    "Renton",
+    "Kirkland",
+    "Redmond"
+  ],
+  "address": {
+    "street": "16000 Bothell Everett Hwy",
+    "city": "Mill Creek",
+    "state": "WA",
+    "zip": "98012"
+  },
+  "seo": {
+    "description": "Professional towing services in Mill Creek, WA. 24/7 emergency towing, roadside assistance, and more. Fast, reliable service.",
+    "google_analytics_id": "G-XXXXXXXXXX"
+  },
+  "services_section": {
+    "title": "Our Services",
+    "description": "Professional towing services available 24/7"
+  },
+  "services_options": [
+    {
+      "title": "Emergency Towing",
+      "url": "emergency-towing.html"
+    },
+    {
+      "title": "Roadside Assistance",
+      "url": "roadside-assistance.html"
+    },
+    {
+      "title": "Flatbed Towing",
+      "url": "auto-wrecking-and-flatbed-towing.html"
+    }
+  ],
+  "testimonials": {
+    "testimonial1": {
+      "text": "I was stranded in Mill Creek after my car broke down. They arrived within 20 minutes and got me back on the road in no time. Their emergency service is truly reliable!",
+      "author": "Jessica J.",
+      "city": "Mill Creek",
+      "state": "WA",
+      "rating": 5,
+      "date": "2025-03-28"
+    },
+    "testimonial2": {
+      "text": "Late night breakdown in Mill Creek - Mill Creek Towing was there in 25 minutes. Professional, courteous, and got my vehicle to the shop safely. Highly recommend their emergency service!",
+      "author": "Sarah J.",
+      "city": "Mill Creek",
+      "state": "WA",
+      "rating": 5,
+      "date": "2025-01-17"
+    },
+    "testimonial3": {
+      "text": "Needed a flatbed tow truck for my SUV in Mill Creek. Mill Creek Towing provided a flatbed service and handled my vehicle with care. Very impressed with their professionalism!",
+      "author": "Michael I.",
+      "city": "Mill Creek",
+      "state": "WA",
+      "rating": 5,
+      "date": "2024-11-27"
+    }
+  },
+  "useCityOverlay": true,
+  "domain": "millcreektowing.com"
+}
