@@ -1,0 +1,191 @@
+{{current_page}}="emergency-towing"
+<script type="application/json" id="page-config">
+{
+  "page_title": "Emergency Towing | {{business.name}} in {{address.city}}, {{address.state}}",
+  "hero_title": "24/7 Emergency Towing",
+  "about_heading": "Emergency Towing in {{address.city}}, {{address.state}}",
+  "about_intro": "Stuck on the road? Our emergency towing team is ready to help you 24/7 in {{address.city}} and nearby cities.",
+  "about_services_list": [
+    "24/7 emergency towing",
+    "Fast response times",
+    "Accident recovery",
+    "Breakdown assistance",
+    "Professional service"
+  ],
+  "about_links": [
+    {
+      "label": "Flatbed Towing",
+      "url": "auto-wrecking-and-flatbed-towing.html"
+    },
+    {
+      "label": "Roadside Assistance",
+      "url": "roadside-assistance.html"
+    },
+    {
+      "label": "Tow Truck Service",
+      "url": "tow-truck-service.html"
+    }
+  ]
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{page_title}}</title>
+  <meta name="description" content="{{seo.description}}">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Add favicon, Open Graph, and other meta tags as needed -->
+</head>
+<body>
+  <!-- Header/Nav -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo-reviews-container">
+        <a href="index.html" class="logo-container">
+          <img src="images/logo.png" alt="Logo" class="site-logo" />
+        </a>
+        <!-- Google reviews image (optional) -->
+        <picture class="google-reviews-picture">
+          <source srcset="images/google-reviews.webp" type="image/webp">
+          <source srcset="images/google-reviews.png" type="image/png">
+          <img src="images/google-reviews.png" alt="Google Reviews rating" class="google-reviews" onerror="this.parentElement.style.display='none'">
+        </picture>
+      </div>
+      <nav class="main-navigation">
+        <ul class="nav-list">
+          <li><a href="tow-truck-service.html" class="nav-item">Towing Service</a></li>
+          <li><a href="emergency-towing.html" class="nav-item">Emergency Towing</a></li>
+          <li><a href="roadside-assistance.html" class="nav-item">Roadside Assistance</a></li>
+          <li><a href="auto-wrecking-and-flatbed-towing.html" class="nav-item">Auto Wrecking & Flatbed Towing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-split">
+    <div class="hero-right" style="background-image: url('images/{{hero_image}}');">
+      <div class="hero-overlay">
+        <div class="hero-text-group">
+          <div class="hero-company">{{business.name}}</div>
+          <div class="hero-title">{{hero_title}}</div>
+          <div class="hero-phone">{{phone_number}}</div>
+          <div class="hero-btn-group">
+            <a href="index.html#contact" class="btn hero-btn">REQUEST HELP</a>
+            <a href="tel:{{phone_number}}" class="btn hero-btn call-btn">CALL NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container main-content">
+    <!-- About Card -->
+    <section class="about-card card flex-row">
+      <div class="about-text">
+        <h1>{{about_heading}}</h1>
+        <p>{{about_intro}}</p>
+        <ul>
+          {{about_services_list}}
+        </ul>
+        <div class="about-links">
+          {{about_links_rendered}}
+        </div>
+      </div>
+      <div class="about-quote-card">
+        <img src="images/quote-card.png" alt="Free Quote" class="quote-img" />
+        <p>Get in touch with us today for a free, no-obligation quote.</p>
+        <a href="#contact" class="quote-btn">GET A QUOTE</a>
+      </div>
+    </section>
+
+    <!-- Services Card -->
+    <section class="services-card card">
+      <h2>{{services_section.title}}</h2>
+      <p class="services-description">{{services_section.description}}</p>
+      <div class="services-list flex-row">
+        {{services_buttons}}
+      </div>
+    </section>
+
+    <!-- Contact Card -->
+    <section class="contact-card card" id="contact">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <label for="contact-name">Name:</label>
+        <input type="text" id="contact-name" name="name" required>
+
+        <label for="contact-email">Email:</label>
+        <input type="email" id="contact-email" name="email" required>
+
+        <label for="contact-phone">Phone Number:</label>
+        <input type="tel" id="contact-phone" name="phone">
+
+        <label for="contact-service">I'm Interested In:</label>
+        <select id="contact-service" name="service" required>
+          <option value="">Select a service</option>
+          <option value="Emergency Towing">Emergency Towing</option>
+          <option value="Roadside Assistance">Roadside Assistance</option>
+          <option value="Flatbed Towing">Flatbed Towing</option>
+        </select>
+
+        <div class="contact-btn-row">
+          <button type="submit" class="contact-btn">Submit</button>
+          <a href="tel:{{phone_number}}" class="contact-btn call-btn">Call Now</a>
+        </div>
+      </form>
+    </section>
+
+    <!-- Testimonials Card -->
+    <section class="testimonials card">
+      <h2>What Our Customers Say</h2>
+      {{testimonials_section}}
+    </section>
+
+    <!-- FAQ Card -->
+    <section class="faq-card card">
+      <h2>Frequently Asked Questions</h2>
+      {{faq_section}}
+    </section>
+
+    <!-- Service Areas Card -->
+    {{service_areas}}
+
+    <!-- Map Card -->
+    <section class="map-card card">
+      {{map_embed}}
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-extended">
+    <div class="footer-main-row" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+      <div class="footer-col footer-links-col">
+        <h3>QUICK LINKS</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tow-truck-service.html">Towing Service</a></li>
+          <li><a href="emergency-towing.html">Emergency Towing</a></li>
+          <li><a href="roadside-assistance.html">Roadside Assistance</a></li>
+          <li><a href="auto-wrecking-and-flatbed-towing.html">Auto Wrecking & Flatbed</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-company-col">
+        <h3>COMPANY INFO</h3>
+        <div class="footer-company-info">
+          <div><strong>{{business.name}}</strong></div>
+          <div>{{address.street}}</div>
+          <div>{{address.city}}, {{address.state}}</div>
+          <div><a href="tel:{{phone_number}}" class="footer-phone-link">{{phone_number}}</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright" style="text-align: center; margin-top: 40px;">
+      &copy; {{year}} {{business.name}}. Fast, Reliable, Local Service 24/7.
+    </div>
+  </footer>
+</body>
+</html> 

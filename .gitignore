@@ -1,0 +1,9 @@
+node_modules/
+dist_prev/
+logs/
+archive/
+*.log
+.DS_Store
+.vite/
+.env
+.env.*

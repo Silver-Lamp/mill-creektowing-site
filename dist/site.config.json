@@ -1,0 +1,81 @@
+{
+  "business": {
+    "name": "Mill Creek Towing",
+    "slug": "mill-creek-towing"
+  },
+  "phone_number": "(425) 270-2226",
+  "location_name": "Mill Creek",
+  "coordinates": {
+    "lat": 47.8577455,
+    "lng": -122.2210628
+  },
+  "service_areas": [
+    "Mill Creek",
+    "Auburn",
+    "Bellevue",
+    "Everett",
+    "Federal Way",
+    "Kent",
+    "Kirkland",
+    "Renton",
+    "Seattle",
+    "Tacoma"
+  ],
+  "address": {
+    "street": "16000 Bothell Everett Hwy",
+    "city": "Mill Creek",
+    "state": "WA",
+    "zip": "98012",
+    "lat": 47.8577455,
+    "lng": -122.2210628
+  },
+  "seo": {
+    "description": "Professional towing services in Mill Creek, WA. 24/7 emergency towing, roadside assistance, and more. Fast, reliable service.",
+    "google_analytics_id": "G-XXXXXXXXXX"
+  },
+  "services_section": {
+    "title": "Our Services",
+    "description": "Professional towing services available 24/7"
+  },
+  "services_options": [
+    {
+      "title": "Emergency Towing",
+      "url": "emergency-towing.html"
+    },
+    {
+      "title": "Roadside Assistance",
+      "url": "roadside-assistance.html"
+    },
+    {
+      "title": "Flatbed Towing",
+      "url": "auto-wrecking-and-flatbed-towing.html"
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "John D.",
+      "city": "Mill Creek",
+      "state": "WA",
+      "text": "Fast and professional service. They arrived within 30 minutes of my call and got me back on the road quickly.",
+      "rating": 5
+    },
+    {
+      "author": "Sarah M.",
+      "city": "Mill Creek",
+      "state": "WA",
+      "text": "Excellent service! The driver was very helpful and professional. Highly recommend their towing service.",
+      "rating": 5
+    },
+    {
+      "author": "Mike R.",
+      "city": "Mill Creek",
+      "state": "WA",
+      "text": "Great experience with this towing company. They were prompt, professional, and reasonably priced.",
+      "rating": 5
+    }
+  ],
+  "useCityOverlay": true,
+  "domain": "millcreektowing.com",
+  "year": "2025",
+  "hero_image": "hero-5.jpg"
+}

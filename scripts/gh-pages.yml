@@ -1,0 +1,4 @@
+  - name: Replace placeholders in dist
+    run: node scripts/replace-placeholders.cjs dist 
+  - name: Inject per-page config
+    run: node scripts/inject-page-config.cjs dist 
